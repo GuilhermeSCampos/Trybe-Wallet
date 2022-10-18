@@ -9,7 +9,7 @@ class Wallet extends React.Component {
   render() {
     // const { expenses } = this.props;
     return (
-      <div>
+      <div className='bg-gray-800 w-screen h-screen'>
         <Header />
         <WalletForm />
         <Table />

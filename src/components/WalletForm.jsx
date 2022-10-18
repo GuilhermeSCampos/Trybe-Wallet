@@ -59,60 +59,76 @@ class WalletForm extends Component {
     const { currencies, editor } = this.props;
     const { value, description, currency, method, tag } = this.state;
     return (
-      <div>
+      <div className='my-10 mx-5'>
         <form>
-          <input
-            value={ value }
-            name="value"
-            data-testid="value-input"
-            onChange={ this.inputHandle }
-            type="number"
-          />
-          <input
-            value={ description }
-            name="description"
-            data-testid="description-input"
-            onChange={ this.inputHandle }
-          />
-          <select
-            value={ currency }
-            name="currency"
-            data-testid="currency-input"
-            onChange={ this.inputHandle }
-          >
-            {currencies.map((element) => (
-              <option value={ element } key={ element }>
-                {element}
-              </option>
-            ))}
-          </select>
-          <select
-            value={ method }
-            name="method"
-            data-testid="method-input"
-            onChange={ this.inputHandle }
-          >
-            <option value="Dinheiro">Dinheiro</option>
-            <option value="Cartão de crédito">Cartão de crédito</option>
-            <option value="Cartão de débito">Cartão de débito</option>
-          </select>
-          <select
-            value={ tag }
-            name="tag"
-            data-testid="tag-input"
-            onChange={ this.inputHandle }
-          >
-            <option value="Alimentação">Alimentação</option>
-            <option value="Lazer">Lazer</option>
-            <option value="Trabalho">Trabalho</option>
-            <option value="Transporte">Transporte</option>
-            <option value="Saúde">Saúde</option>
-          </select>
+          <label className='text-gray-100'> Valor
+            <input
+              value={value}
+              name="value"
+              data-testid="value-input"
+              onChange={this.inputHandle}
+              type="number"
+              className='text-gray-800 mx-4 rounded'
+            />
+          </label>
+          <label className='text-gray-100'> Descrição
+            <input
+              value={description}
+              name="description"
+              data-testid="description-input"
+              onChange={this.inputHandle}
+              className='text-gray-800 mx-4 rounded'
+            />
+          </label>
+          <label className='text-gray-100'> Moeda
+            <select
+              value={currency}
+              name="currency"
+              data-testid="currency-input"
+              onChange={this.inputHandle}
+              className='text-gray-800 mx-4 rounded'
+            >
+              {currencies.map((element) => (
+                <option value={element} key={element}>
+                  {element}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className='text-gray-100'> Método
+            <select
+              value={method}
+              name="method"
+              data-testid="method-input"
+              onChange={this.inputHandle}
+              className='text-gray-800 mx-4 rounded'
+            >
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Cartão de crédito">Cartão de crédito</option>
+              <option value="Cartão de débito">Cartão de débito</option>
+            </select>
+          </label>
+          <label className='text-gray-100'> Tag
+            <select
+              value={tag}
+              name="tag"
+              data-testid="tag-input"
+              onChange={this.inputHandle}
+              className='text-gray-800 mx-4'
+            >
+              <option value="Alimentação">Alimentação</option>
+              <option value="Lazer">Lazer</option>
+              <option value="Trabalho">Trabalho</option>
+              <option value="Transporte">Transporte</option>
+              <option value="Saúde">Saúde</option>
+            </select>
+          </label>
           {editor ? (
             <button
               name="edita-despesa"
               type="submit"
-              onClick={ this.editFormButton }
+              onClick={this.editFormButton}
+              className='text-gray-100  bg-emerald-700 py-1 px-3 rounded hover:bg-cyan-800 ease-in-out duration-1000'
             >
               Editar despesa
             </button>
@@ -120,7 +136,8 @@ class WalletForm extends Component {
             <button
               name="adiciona-despesa"
               type="submit"
-              onClick={ this.submitFormButton }
+              onClick={this.submitFormButton}
+              className='text-gray-100  bg-emerald-700 py-1 px-3 rounded hover:bg-cyan-800 ease-in-out duration-1000'
             >
               Adicionar despesa
             </button>
