@@ -59,7 +59,7 @@ class Table extends Component {
                       data-testid="edit-btn"
                       type="button"
                     >
-                      <img src={edit} className='w-10' />
+                      <img src={edit} name={element.id} className='w-10' onClick={this.editButton} />
                     </button>
                     <button
                       onClick={this.removeButton}
@@ -67,7 +67,7 @@ class Table extends Component {
                       type="button"
                       data-testid="delete-btn"
                     >
-                      <img src={close} className='w-10' />
+                      <img src={close} name={element.id} className='w-10' onClick={this.removeButton} />
                     </button>
 
                   </td>
