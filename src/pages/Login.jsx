@@ -45,8 +45,8 @@ class Login extends React.Component {
   render() {
     const { email, password, button } = this.state;
     return (
-      <div className='bg-gray-800 flex flex-row-reverse justify-between' >
-        <div className="flex flex-col	m-3.5 mr-20 justify-items-center items-center justify-center max-w-xl w-1/2">
+      <div className='bg-gray-800 flex flex-row-reverse justify-between items-center' >
+        <div className="flex flex-col	m-3.5 mr-20 justify-items-center items-center justify-center max-w-xl w-3/4 bg-gray-700 h-96 rounded-xl">
           <h2 className='text-6xl text-zinc-300 mb-3' >Trybe Wallet</h2>
           <input
             name="email"
