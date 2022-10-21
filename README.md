@@ -4,7 +4,7 @@
 
 <h4 align="center">Projeto de uma carteira web feito no curso da <a href="https://www.betrybe.com/">Trybe</a></h4>
 
-https://user-images.githubusercontent.com/82980024/194436244-66a8c0f9-4091-4f9b-a3ce-656a635d8b69.mp4
+https://user-images.githubusercontent.com/82980024/196572290-8a5145f3-1083-4d5f-98d6-5bad794ad76c.mp4
 
 # 🚀 Technologies
 
